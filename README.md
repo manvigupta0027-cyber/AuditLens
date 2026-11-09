@@ -1,4 +1,7 @@
 # AuditLens
+
+**Live demo:** https://auditlens-avmkvq6w9rw9t6mmhrm9ia.streamlit.app/
+
 Data-driven screening of Indian listed companies for earnings manipulation and financial distress
 (Beneish M-Score, Altman Z''-Score, Piotroski F-Score -> transparent 0-100 risk score), backtested on known failures.
 
