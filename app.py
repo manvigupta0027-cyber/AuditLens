@@ -9,9 +9,10 @@ st.title("AuditLens")
 st.caption("Financial red-flag screening for Indian listed companies - Beneish M, Altman Z'' and Piotroski F, combined into a transparent 0-100 risk score. "
            "A high score means 'look closer', not 'fraud'.")
 
-if not os.path.exists("outputs/full_scores.csv"):
+DATA = "outputs/dashboard_data.csv" if os.path.exists("outputs/dashboard_data.csv") else "outputs/full_scores.csv"
+if not os.path.exists(DATA):
     st.error("Run `python run_analysis.py` first."); st.stop()
-df = pd.read_csv("outputs/full_scores.csv")
+df = pd.read_csv(DATA)
 df["risk_tier"] = pd.Categorical(df["risk_tier"], ["Low", "Medium", "High"], ordered=True)
 
 st.sidebar.header("Filters")
@@ -47,7 +48,7 @@ with t2:
     a.plotly_chart(px.line(cdf, x="year", y="risk_score", markers=True, title="Risk score over time"), width='stretch')
     b.plotly_chart(px.line(cdf, x="year", y=["m_score"], markers=True, title="Beneish M-Score (above -1.78 = warning)").add_hline(y=-1.78, line_dash="dash"), width='stretch')
     a.plotly_chart(px.line(cdf, x="year", y="z_score", markers=True, title="Altman Z'' (below 1.1 = distress)").add_hline(y=1.1, line_dash="dash"), width='stretch')
-    b.plotly_chart(px.line(cdf, x="year", y=["net_profit", "cfo"], markers=True, title="Profit vs operating cash flow"), width='stretch')
+    b.plotly_chart(px.line(cdf, x="year", y="cfo_to_pat", markers=True, title="Cash conversion: operating cash flow / net profit (below 0.5 = weak)").add_hline(y=0.5, line_dash="dash"), width='stretch')
 
 with t3:
     sec = df[df["year"] == year].groupby("sector")["risk_score"].mean().sort_values(ascending=False).reset_index()

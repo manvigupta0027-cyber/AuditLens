@@ -8,6 +8,9 @@ print("Using data:", path)
 df = pd.read_csv(path)
 res = run_all(df)
 res.to_csv("outputs/full_scores.csv", index=False)
+keep = ["company", "sector", "group", "year", "risk_score", "risk_tier", "m_score", "z_score", "z_zone",
+        "f_score", "cfo_to_pat", "rec_growth", "sales_growth", "m_pts", "z_pts", "f_pts", "cash_pts", "rec_pts"]
+res[[c for c in keep if c in res.columns]].to_csv("outputs/dashboard_data.csv", index=False)
 
 latest = res[res["year"] == res["year"].max()]
 cols = ["company", "sector", "m_score", "z_score", "z_zone", "f_score", "cfo_to_pat", "risk_score", "risk_tier"]
