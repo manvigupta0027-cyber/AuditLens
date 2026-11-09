@@ -1,0 +1,6 @@
+company,event_year,years_scored,caught,first_flag_year,lead_time_years,max_risk_score
+Amtek Auto,2018,4,True,2016.0,2.0,40.0
+Jaypee Infratech,2018,1,,,,25.0
+Jet Airways,2020,2,True,2017.0,3.0,70.0
+Reliance Communications,2019,1,,2018.0,1.0,50.0
+Videocon Industries,2019,2,True,2018.0,1.0,35.0

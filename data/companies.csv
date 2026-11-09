@@ -1,0 +1,13 @@
+file,company,group,sector,event_year
+asian_paints,Asian Paints,Healthy,Paints,
+Infosys,Infosys,Healthy,IT,
+Hind. Unilever,Hindustan Unilever,Healthy,FMCG,
+Titan Company,Titan,Healthy,Consumer,
+Maruti Suzuki,Maruti Suzuki,Healthy,Auto,
+Nestle India,Nestle India,Healthy,FMCG,
+Jet Airways,Jet Airways,Failed,Aviation,2020
+Reliance Communi,Reliance Communications,Failed,Telecom,2019
+Videocon Inds,Videocon Industries,Failed,Consumer,2019
+Jaypee Infratech,Jaypee Infratech,Failed,Real Estate,2018
+Unitech,Unitech,Failed,Real Estate,
+Amtek Auto,Amtek Auto,Failed,Auto,2018

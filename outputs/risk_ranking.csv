@@ -1,0 +1,9 @@
+company,sector,m_score,z_score,z_zone,f_score,cfo_to_pat,risk_score,risk_tier
+Unitech,Real Estate,-0.61,-2.83,Distress,5.0,,70.0,High
+Reliance Communications,Telecom,-4.41,-22.63,Distress,2.0,,50.0,Medium
+Maruti Suzuki,Auto,-2.69,5.3,Safe,5.0,1.3,10.0,Low
+Asian Paints,Paints,-2.76,6.21,Safe,6.0,1.64,0.0,Low
+Hindustan Unilever,FMCG,-2.3,4.18,Safe,6.0,0.73,0.0,Low
+Infosys,IT,-2.58,7.22,Safe,6.0,1.15,0.0,Low
+Nestle India,FMCG,-3.2,3.48,Safe,6.0,1.42,0.0,Low
+Titan,Consumer,-2.4,5.97,Safe,7.0,1.1,0.0,Low
